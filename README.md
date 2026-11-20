@@ -130,6 +130,4 @@ tests/                   trace-logger tests
 
 ## Licence
 
-To be decided by Allen before the repo is made public (MIT is the usual
-default for this kind of scaffold; do not assume it). No licence file is
-included in this scaffold — add one when the GitHub repo is created.
+MIT License — see `LICENSE` (copyright ValeriaWong, 2026).

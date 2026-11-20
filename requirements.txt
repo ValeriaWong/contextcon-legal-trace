@@ -1,0 +1,6 @@
+# Stdlib only — nothing to install.
+# The scaffold runs on Python 3.10+ with the standard library alone,
+# so the demo works with no paid service and no network.
+#
+# Optional, only if the live Meko backend is preferred over urllib:
+# httpx>=0.27

@@ -1,0 +1,129 @@
+Traceable Counsel — ContextCon Track 07 (SYNTHETIC CASE ONLY)
+Datapack: 39ebe0e3-2638-45b9-a138-a1e48407f453  |  Backend: meko
+Screened: {'admitted': 12, 'flagged': 1, 'missing': 1}
+
+Events (chain status):
+  EVT-01 2026-03-02 [complete] Contract formed: 200 boxes, 48000, pay in 7 days  — EV-001, EV-002
+  EVT-02 2026-03-10 [complete] Delivery: 200 boxes signed for  — EV-003, EV-004
+  EVT-03 2026-03-15 [complete] Part payment: 20000 received  — EV-006, EV-007
+  EVT-04 2026-03-18 [gap] Damage alleged: 'maybe 30' boxes  — EV-008
+  EVT-05 2026-03-20 [complete] Respondent promises to 'sort it out'  — EV-010, EV-011
+  EVT-06 2026-03-25 [complete] Demand: balance unpaid, no damage photos received  — EV-012
+
+Strategy draft:
+  Claim the unpaid balance on the basis of EVT-01 (contract), EVT-02 (delivery), and EVT-03 (part payment of 20000). Treat the damage allegation (EVT-04) as unproven until photos or an inspection record are produced.
+  Draft for a human lawyer to review. Not legal advice. Not court-ready. Synthetic case only.
+
+Adversarial review: draft stands, with one forced refusal and one downgrade
+Missing evidence: ['EV-014 — does not exist in this case', 'damage photos', 'damage count', 'inspection record', 'EV-014 (written admission — does not exist in this case)']
+
+Decision trace:
+  [T001] screener (verified) evidence: EV-001
+      Evidence EV-001 admitted (Fang Qing, 2026-03-02).
+      reason: speaker attributed; timestamp plausible; complete message
+  [T002] screener (verified) evidence: EV-002
+      Evidence EV-002 admitted (Zhou Mingyuan, 2026-03-02).
+      reason: speaker attributed; timestamp plausible; complete message
+  [T003] screener (verified) evidence: EV-003
+      Evidence EV-003 admitted (Fang Qing, 2026-03-10).
+      reason: speaker attributed; timestamp plausible; complete message
+  [T004] screener (verified) evidence: EV-004
+      Evidence EV-004 admitted (Warehouse (via Fang Qing), 2026-03-10).
+      reason: speaker attributed; timestamp plausible; complete message
+  [T005] screener (verified) evidence: EV-005
+      Evidence EV-005 admitted (Zhou Mingyuan, 2026-03-12).
+      reason: speaker attributed; timestamp plausible; complete message
+  [T006] screener (verified) evidence: EV-006
+      Evidence EV-006 admitted (Zhou Mingyuan, 2026-03-15).
+      reason: speaker attributed; timestamp plausible; complete message
+  [T007] screener (verified) evidence: EV-007
+      Evidence EV-007 admitted (Fang Qing, 2026-03-15).
+      reason: speaker attributed; timestamp plausible; complete message
+  [T008] screener (verified) evidence: EV-008
+      Evidence EV-008 admitted (Zhou Mingyuan, 2026-03-18).
+      reason: speaker attributed; timestamp plausible; complete message
+  [T009] screener (verified) evidence: EV-009
+      Evidence EV-009 admitted (Fang Qing, 2026-03-18).
+      reason: speaker attributed; timestamp plausible; complete message
+  [T010] screener (verified) evidence: EV-010
+      Evidence EV-010 admitted (Zhou Mingyuan, 2026-03-20).
+      reason: speaker attributed; timestamp plausible; complete message
+  [T011] screener (verified) evidence: EV-011
+      Evidence EV-011 admitted (Zhou Mingyuan, 2026-03-20).
+      reason: speaker attributed; timestamp plausible; complete message
+  [T012] screener (verified) evidence: EV-012
+      Evidence EV-012 admitted (Fang Qing, 2026-03-25).
+      reason: speaker attributed; timestamp plausible; complete message
+  [T013] screener (verified) evidence: EV-013
+      Evidence EV-013 is flagged and excluded.
+      reason: speaker unattributed; never used to build an event
+  [T014] screener (cannot_verify) evidence: —
+      Evidence EV-014 does not exist in this case.
+      reason: Item is referenced as missing by design; no agent may invent it.
+      missing: EV-014 — does not exist in this case
+  [T015] event_extractor (verified) evidence: EV-001, EV-002
+      Event EVT-01 extracted: Contract formed: 200 boxes, 48000, pay in 7 days.
+      reason: extracted once from admitted evidence; promoted to shared memory
+  [T016] event_extractor (verified) evidence: EV-003, EV-004
+      Event EVT-02 extracted: Delivery: 200 boxes signed for.
+      reason: extracted once from admitted evidence; promoted to shared memory
+  [T017] event_extractor (verified) evidence: EV-006, EV-007
+      Event EVT-03 extracted: Part payment: 20000 received.
+      reason: extracted once from admitted evidence; promoted to shared memory
+  [T018] event_extractor (verified) evidence: EV-008
+      Event EVT-04 extracted: Damage alleged: 'maybe 30' boxes.
+      reason: extracted once from admitted evidence; promoted to shared memory
+  [T019] event_extractor (verified) evidence: EV-010, EV-011
+      Event EVT-05 extracted: Respondent promises to 'sort it out'.
+      reason: extracted once from admitted evidence; promoted to shared memory
+  [T020] event_extractor (verified) evidence: EV-012
+      Event EVT-06 extracted: Demand: balance unpaid, no damage photos received.
+      reason: extracted once from admitted evidence; promoted to shared memory
+  [T021] chain_checker (verified) evidence: EV-001, EV-002
+      Event EVT-01 chain is complete.
+      reason: Every cited item was admitted; no further link needed.
+  [T022] chain_checker (verified) evidence: EV-003, EV-004
+      Event EVT-02 chain is complete.
+      reason: Every cited item was admitted; no further link needed.
+  [T023] chain_checker (verified) evidence: EV-006, EV-007
+      Event EVT-03 chain is complete.
+      reason: Every cited item was admitted; no further link needed.
+  [T024] chain_checker (cannot_verify) evidence: EV-008
+      Event EVT-04 has a gap in its chain.
+      reason: Chain incomplete: the allegation is stated but unsupported by photos, a count, or an inspection.
+      missing: damage photos, damage count, inspection record
+  [T025] chain_checker (verified) evidence: EV-010, EV-011
+      Event EVT-05 chain is complete.
+      reason: Every cited item was admitted; no further link needed.
+  [T026] chain_checker (verified) evidence: EV-012
+      Event EVT-06 chain is complete.
+      reason: Every cited item was admitted; no further link needed.
+  [T027] strategy (verified) evidence: EV-001, EV-002
+      Rely on EVT-01: Contract formed: 200 boxes, 48000, pay in 7 days.
+      reason: Premise is a chain-complete event from shared memory.
+  [T028] strategy (verified) evidence: EV-003, EV-004
+      Rely on EVT-02: Delivery: 200 boxes signed for.
+      reason: Premise is a chain-complete event from shared memory.
+  [T029] strategy (verified) evidence: EV-006, EV-007
+      Rely on EVT-03: Part payment: 20000 received.
+      reason: Premise is a chain-complete event from shared memory.
+  [T030] strategy (verified) evidence: EV-010, EV-011
+      Rely on EVT-05: Respondent promises to 'sort it out'.
+      reason: Premise is a chain-complete event from shared memory.
+  [T031] strategy (verified) evidence: EV-012
+      Rely on EVT-06: Demand: balance unpaid, no damage photos received.
+      reason: Premise is a chain-complete event from shared memory.
+  [T032] strategy (verified) evidence: EV-001, EV-002, EV-003, EV-004, EV-006, EV-007, EV-010, EV-011, EV-012
+      Strategy draft formed from chain-complete events only.
+      reason: Gapped events were excluded from the premises and listed as open items instead.
+  [T033] adversarial (refused) evidence: —
+      The respondent admitted the debt in writing.
+      reason: No evidence item in the datapack is a written admission. The closest item, EV-011, is a promise to 'sort it out', which is not an admission of a specific debt. EVT-05 is a promise, not an admission.
+      missing: EV-014 (written admission — does not exist in this case)
+  [T034] adversarial (verified) evidence: EV-010, EV-011
+      The respondent promised to sort it out on 2026-03-20 (EV-010, EV-011). Whether that promise amounts to an admission is a question for a human lawyer.
+      reason: Downgraded to what the evidence actually says.
+  [T035] adversarial (cannot_verify) evidence: EV-008
+      The damage allegation (EVT-04) cannot support a deduction.
+      reason: Damage is alleged ('maybe 30' boxes) with no photos, no count, and no inspection record.
+      missing: damage photos, damage count, inspection record

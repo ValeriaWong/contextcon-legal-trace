@@ -237,6 +237,15 @@ class MekoMCPClient(DatapackStore):
         # metadata. memory_promote is one-way private -> shared and is
         # only for promoting an already-private memory, so direct
         # memory_add is the right call for a new shared record.
+        # Idempotency: Meko does no duplicate check, so re-running the
+        # demo re-added EVT-01..06 a second time (2026-11-21). Skip when
+        # a record with the same id is already stored.
+        rid = record.get("id")
+        if rid:
+            for hit in self.search(str(rid), limit=5):
+                text = hit.get("memory") or hit.get("text") or ""
+                if f'"id": "{rid}"' in text or f'"id":"{rid}"' in text:
+                    return
         text = record.get("text") or json.dumps(record, ensure_ascii=False)
         self.call_tool("memory_add", {
             "text": text,
